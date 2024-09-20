@@ -42,7 +42,7 @@ class IRVLUTDDoorHandleDataset(Dataset):
         image = Image.open(image_path).convert('RGB')
 
         # Load depth image
-        depth_path = os.path.join(self.depth_dir, f'{base_filename}.png')
+        depth_path = os.path.join(self.depth_dir, f'{base_filename.replace("color", "depth")}.png')
         depth = Image.open(depth_path).convert('L')  # Assuming depth image is single-channel (grayscale)
 
         # Load labels
