@@ -8,26 +8,6 @@ This Python package provides a PyTorch dataset loader for the IRVLUTD Door Handl
 
 This package simplifies loading and using the dataset in machine learning workflows. It is a part of the [iTeach](https://irvlutd.github.io/iTeach) project.
 
-
-## Dataset Structure
-TODO: links coming soon...
-
-The dataset should follow this structure:
-```
-data/
-├── images/ (filename.png)
-├── labels/ (filename.txt)
-├── depth/ (filename_with_depth.png)
-└── obj.names  # Contains class names (e.g., Door, Handle)
-```
-
-Each sample in the dataset has the same filename (without the extension) across the images and labels directories.
-
-- **Images**: RGB images (e.g., `image.png`)
-- **Depth**: Depth images (e.g., `depth.png`)
-- **Labels**: YOLO format labels (e.g., `label.txt`)
-- **obj.names**: Class names (e.g., `Door`, `Handle`)
-
 ## Installation
 ```shell
 pip install IRVLUTDDoorHandleDataset
@@ -60,6 +40,27 @@ print(f"Depth Shape: {depth.size}")
 print(f"Labels: {labels}")
 print(f"Class Labels: {class_labels}")
 ```
+
+
+## Dataset Structure
+TODO: links coming soon...
+
+The dataset should follow this structure:
+```
+data/
+├── images/ (filename.png)
+├── labels/ (filename.txt)
+├── depth/ (filename_with_depth.png)
+└── obj.names  # Contains class names (e.g., Door, Handle)
+```
+
+Each sample in the dataset shares the same filename (excluding the extension) in both the images and labels directories. The iTeach system assumes that all messages received simultaneously belong to the same set and will assign them the same name as required by YOLO. Due to this assumption, please be aware that there may be inconsistencies when using depth data alongside the color samples.
+
+- **Images**: RGB images (e.g., `image.png`)
+- **Depth**: Depth images (e.g., `depth.png`)
+- **Labels**: YOLO format labels (e.g., `label.txt`)
+- **obj.names**: Class names (e.g., `Door`, `Handle`)
+
 
 ## License
 
