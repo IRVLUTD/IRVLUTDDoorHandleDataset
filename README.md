@@ -17,11 +17,11 @@ The dataset should follow this structure:
 data/
 ├── images/ (filename.png)
 ├── labels/ (filename.txt)
-├── depth/ (filename.png)
+├── depth/ (filename_with_depth.png)
 └── obj.names  # Contains class names (e.g., Door, Handle)
 ```
 
-Each sample in the dataset has the same filename (without the extension) across the images, labels, and depth directories.
+Each sample in the dataset has the same filename (without the extension) across the images and labels directories.
 
 - **Images**: RGB images (e.g., `image.png`)
 - **Depth**: Depth images (e.g., `depth.png`)
@@ -29,29 +29,10 @@ Each sample in the dataset has the same filename (without the extension) across 
 - **obj.names**: Class names (e.g., `Door`, `Handle`)
 
 ## Installation
-
-To install the package, follow these steps:
-
-1. Clone the repository or download the package files.
-2. Navigate to the root directory where `setup.py` is located.
-3. Run the following command to install the package:
-
-```bash
-pip install .
+```shell
+pip install IRVLUTDDoorHandleDataset
 ```
-
-Make sure you have the necessary dependencies installed:
-
-- `torch`
-- `Pillow`
-- `numpy`
-
-Alternatively, you can install the dependencies via the provided `requirements.txt`:
-
-```bash
-pip install -r requirements.txt
-```
-
+T
 ## Usage
 
 Once installed, you can use the `IRVLUTDDoorHandleDataset` class to load dataset in a PyTorch-compatible format:
