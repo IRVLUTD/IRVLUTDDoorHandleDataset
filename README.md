@@ -32,7 +32,7 @@ Each sample in the dataset has the same filename (without the extension) across 
 ```shell
 pip install IRVLUTDDoorHandleDataset
 ```
-T
+
 ## Usage
 
 Once installed, you can use the `IRVLUTDDoorHandleDataset` class to load dataset in a PyTorch-compatible format:
