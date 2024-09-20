@@ -55,6 +55,10 @@ class IRVLUTDDoorHandleDataset(Dataset):
                 label_data = line.strip().split()
                 class_id = int(label_data[0])
                 bbox = [float(x) for x in label_data[1:]]
+                
+                # Clamp the bounding box values
+                bbox = self.clamp_bbox_values(bbox)
+                
                 boxes.append([class_id] + bbox)  # class_id, cx, cy, w, h
 
                 # Get the class name using class_id
@@ -78,3 +82,7 @@ class IRVLUTDDoorHandleDataset(Dataset):
             'labels': boxes,
             'class_labels': class_labels  # Returns both class ID and name
         }
+
+    def clamp_bbox_values(self, bbox):
+        """Clamp bounding box values to be within [0, 1]."""
+        return [max(0, min(1, value)) for value in bbox]
