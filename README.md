@@ -64,7 +64,7 @@ Each sample in the dataset shares the same filename (excluding the extension) in
 - **Labels**: YOLO format labels (e.g., `label.txt`) (Dataloader normalized the coordinates in [0-1] range)
 - **obj.names**: Class names (e.g., `Door`, `Handle`)
 
-Note: This dataloader will work with any detection dataset following the above mentioned file structure and having normalized YOLO bbox labels store in txt files.
+Note: This dataloader will work with any detection dataset following the above mentioned file structure and having normalized YOLO bbox labels stored in txt files.
 
 ## License
 
