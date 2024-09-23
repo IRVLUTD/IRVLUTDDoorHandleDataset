@@ -26,7 +26,8 @@ from IRVLUTDDoorHandleDataset import IRVLUTDDoorHandleDataset
 root_dir = '/path/to/the/data'
 
 # Initialize the dataset
-dataset = IRVLUTDDoorHandleDataset(root_dir=root_dir)
+dataset = IRVLUTDDoorHandleDataset(root_dir=root_dir) # by default, only images and label dir are read
+dataset = IRVLUTDDoorHandleDataset(root_dir=root_dir, use_depth=True) # to use depth dir as well
 
 # Access the first sample in the dataset
 sample = dataset[0]
