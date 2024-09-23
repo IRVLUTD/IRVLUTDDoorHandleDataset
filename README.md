@@ -1,7 +1,5 @@
 # IRVLUTD Door Handle Dataset Loader
 
-TODO: A dataset banner is coming soon...🚀
-
 This Python package provides a PyTorch dataset loader for the IRVLUTD Door Handle dataset, which includes:
 
 - Images
@@ -9,6 +7,14 @@ This Python package provides a PyTorch dataset loader for the IRVLUTD Door Handl
 - YOLO-style labels
 
 This package simplifies loading and using the dataset in machine learning workflows. It is a part of the [iTeach](https://irvlutd.github.io/iTeach) project.
+
+
+TODO: A dataset banner is coming soon...🚀
+
+<details>
+<summary>Area covered</summary>
+<img src='imgs/area-covered-for-irvlutd-doorhandle-dataset-creation.png'>
+</details>
 
 ## Installation
 ```shell
