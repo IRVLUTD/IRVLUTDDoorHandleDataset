@@ -1,5 +1,7 @@
 # IRVLUTD Door Handle Dataset Loader
 
+TODO: A dataset banner is coming soon...🚀
+
 This Python package provides a PyTorch dataset loader for the IRVLUTD Door Handle dataset, which includes:
 
 - Images
@@ -43,7 +45,7 @@ print(f"Class Labels: {class_labels}")
 
 
 ## Dataset Structure
-TODO: links coming soon...
+Download dataset from [here](https://utdallas.box.com/v/IRVLUTD-DoorHandle-Dataset).
 
 The dataset should follow this structure:
 ```
@@ -58,9 +60,10 @@ Each sample in the dataset shares the same filename (excluding the extension) in
 
 - **Images**: RGB images (e.g., `image.png`)
 - **Depth**: Depth images (e.g., `depth.png`)
-- **Labels**: YOLO format labels (e.g., `label.txt`)
+- **Labels**: YOLO format labels (e.g., `label.txt`) (Dataloader normalized the coordinates in [0-1] range)
 - **obj.names**: Class names (e.g., `Door`, `Handle`)
 
+Note: This dataloader will work with any detection dataset following the above mentioned file structure and having normalized YOLO bbox labels store in txt files.
 
 ## License
 
